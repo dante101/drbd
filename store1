@@ -1,0 +1,16 @@
+resource storage1 {
+protocol C;
+device /dev/drbd0;
+disk /dev/sdb;
+on drbd-node1 {
+address 10.178.6.103:7788;
+meta-disk internal;
+}
+
+on drbd-node2 {
+address 10.178.6.102:7788;
+meta-disk internal;
+}
+
+}
+
